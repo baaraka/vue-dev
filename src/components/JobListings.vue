@@ -18,7 +18,7 @@ const error = ref(null);
 
 onMounted(async () => {
   try {
-    const res = await axios.get("http://localhost:5000/jobs");
+    const res = await axios.get("/api/jobs");
     jobs.value = res.data;
   } catch (error) {
     error.value = "Error in fetching data: " + error.message;
